@@ -38,7 +38,7 @@ public class BrowersFatory {
 	}
 
 	private static WebDriver createChromeDriver() {
-	System.setProperty("chromeDriver", "D:/auto/chromedriver_win32/chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "src/main/config/chromedriver.exe");
 		return new ChromeDriver();
 	}
 	//Close current brower

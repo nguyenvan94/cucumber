@@ -13,12 +13,13 @@ import pageObject.LoginPage;
 public class LoginStep extends TestBase {
 public LoginStep(){
 	}
+
 LoginPage Login = new LoginPage(driver);
 @Given("User navigates to Login page of front site")
-public void Navigatetopage()throws Throwable{
+public void Navigatetopage(){
 	driver.get("https://omsclient.kitchen.dvg-lc.com");
-	  throw new PendingException();
 }
+
 @And("^User enters valid account at front site0$")
 public void EntervalidAccountAtFronsite(){
 	
