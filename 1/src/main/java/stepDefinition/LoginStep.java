@@ -19,14 +19,10 @@ LoginPage Login = new LoginPage(driver);
 public void Navigatetopage(){
 	driver.get("https://omsclient.kitchen.dvg-lc.com");
 }
-
-@And("^User enters valid account at front site0$")
+@When("User enters valid account at front site")
 public void EntervalidAccountAtFronsite(){
-	
-	Login.user_name().sendKeys("admin");
-	
+		Login.user_name().sendKeys("admin1");
 }
-
 @And("User enters valid password at front site")
 public void EntervalidPasswordAtFronsite(){
 	Login.pass_word().sendKeys("123456");

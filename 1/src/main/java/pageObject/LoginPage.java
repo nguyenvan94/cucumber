@@ -25,6 +25,6 @@ public class LoginPage {
  }
 	
  public static WebElement login_success(){
-	 return element = driver .findElement(By.xpath("//span[contains(.,'Trang chủ')]"));
+	 return element = driver .findElement(By.xpath(".//span[@class='ng-star-inserted']"));
  }
 }

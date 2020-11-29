@@ -29,7 +29,7 @@ public class BrowersFatory {
 	}
 
 	private static void addAllBrowerSetup(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         driver.manage().window().setPosition(new Point(0, 0));
         java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension dim = new Dimension((int) screenSize.getWidth(), (int) screenSize.getHeight());

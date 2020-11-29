@@ -30,9 +30,9 @@ public void BeforeScenario() {
     }
 }
 
-@After
-public void AfterScenario(Scenario scenario) {
-	BrowersFatory.closecurrentBrower();
-}
+//@After
+//public void AfterScenario(Scenario scenario) {
+//	BrowersFatory.closecurrentBrower();
+//}
 
 }
