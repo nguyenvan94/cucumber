@@ -1,10 +1,6 @@
 Feature:Front site - Login function
  Background:lauching page
-  Given 
-
-
-
- 
+  Given User navigates to Login page of front site
    Scenario: Login successfully with valid front account
      When User enters valid  account at front site
      And User enters valid password at front site
