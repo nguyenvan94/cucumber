@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 		 features = "src/main/Feature/login.feature"
          , glue = "stepDefinition"
-		,plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-		monochrome = true
+		//,plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+		//monochrome = true
 		)
 public class LoginTestRunner {
 

@@ -16,13 +16,15 @@ public class LoginStep extends TestBase {
 public LoginStep(){
 	}
 
-LoginPage Login = new LoginPage(driver);
-	ConfigFileReader  configFileReader= new ConfigFileReader();
+    LoginPage Login = new LoginPage(driver);
+	ConfigFileReader configFileReader= new ConfigFileReader();
 @Given("^User navigates to Login page of front site$")
 public void Navigatetopage(){
 
 	driver.get(configFileReader.getApplication_URL());
+
 	//driver.get("https://omsclient.kitchen.dvg-lc.com");
+
 }
 
 @When("^User enters valid  account at front site$")

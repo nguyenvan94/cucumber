@@ -11,15 +11,14 @@ import org.omg.IOP.ExceptionDetailMessage;
 public class ConfigFileReader {
  
 	private Properties properties;
-	private final String propertiesFilePath= System.getProperty("user.dir")+"/config/Configuation.properties";
-	
-	
+	private static String propertiesFilePath= System.getProperty("user.dir")+"/configs/Configuation.properties";
+
 	public ConfigFileReader() {
 		//public void ConfigFileReader() Contructor can't void => if void it must not contructor => not contructor=> null
 	try {
 		FileReader fileReader= new FileReader(propertiesFilePath);
 		BufferedReader reader = new BufferedReader(fileReader);
-		Properties pro = new Properties();
+		properties = new Properties();
 		try {
 		      properties.load(reader);
 		      reader.close();
@@ -29,11 +28,11 @@ public class ConfigFileReader {
 		}
 		
 	}catch(FileNotFoundException e ) {
-		//throw new RuntimeErrorException("");
+		throw new RuntimeException("Configuration.properties not found at " + propertiesFilePath);
 		}
 	}
 	public String getApplication_URL() {
-		String URL = properties.getProperty("URL");
+		String URL = properties.getProperty("url").trim();
 		if (URL != null)
 			return URL;
 		else
